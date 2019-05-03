@@ -1,0 +1,82 @@
+body{
+    background: #c8d8ee;
+}       
+.wrapper{
+    width: 960px;
+    margin: auto;
+    border: 0;
+    padding: 10px;
+    background: #eef2fb;
+    height: 650px;
+}
+.td{
+    background: #5787d3;
+    padding: 10px;
+    border-radius: 5px;
+    color: azure;
+    font-size: 30px;
+    text-align: center;
+} 
+.lable{
+    position: inherit;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 300px;
+    padding: 10px 8px 15px 7px;
+    border: 3px solid #031418;
+    border-radius: 10px;
+    background: rgb(253, 253, 253);
+}   
+#lablereturn{
+    margin: 5px 2px;  
+    border: 2px solid #d9d9d9;
+    border-top-color: #c0c0c0;
+    width: 270px;
+    height: 36px;
+    overflow: hidden;
+    direction: ltr;
+    border-radius: 3px;
+} 
+#ketqua{
+    font: normal 30px arial;
+    white-space: nowrap;
+    text-align: right;
+    float: right;
+}
+#buttonstyle{
+    padding-top: 20px;
+    font-size: 20px;
+    
+}
+#buttonstyle>div{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 45px;
+    color: blue;
+}
+#c{
+    padding-left: 20px;
+    padding-right:20px;
+    border-radius: 8px;
+    background-color: chocolate;
+}
+.number{
+    padding-left: 20px;
+    padding-right:20px;
+    border-radius: 8px;
+    background-color: cadetblue;
+}
+.calculation{
+    padding-left: 35px;
+    padding-right:40px;
+    border-radius: 8px;
+    background-color: darkslategrey;
+}
+#result{
+    padding-left: 20px;
+    padding-right:20px;
+    border-radius: 8px;
+    background-color: deepskyblue
+}

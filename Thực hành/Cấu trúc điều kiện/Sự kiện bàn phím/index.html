@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>[*Thực hành] Sự kiện bàn phím</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>        
+        .wrapper{
+            width: 960px;
+            margin: auto;
+            border: 0;
+            padding: 10px;
+            background: #eef2fb;
+            height: 630px;
+        }
+        .td{
+            background: #5787d3;
+            padding: 10px;
+            border-radius: 5px;
+            color: azure;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body style="background: #c8d8ee;" onload="doReady()">
+      <div class="wrapper">
+            <div class="td">
+                [*Thực hành] Sự kiện bàn phím
+                <h5>Hồ Đăng San - C0419H1</h5>
+            </div>
+            <div class="container mt-5">
+              <fieldset class="border p-3">
+                  <legend>Đề Bài</legend>
+                  Di chuyển hình ảnh nhân vật Nobita lên, xuống, sang trái, sang phải sử dụng các phím tương ứng. 
+                  Việc này được thực hiện bằng cách thay đổi thuộc tính tọa độ của thẻ khi xử lý event.
+              </fieldset>
+              <fieldset class="border p-3">
+                <legend>Bài Làm</legend>
+                Hãy ấn các phím up, down, left, right 
+                <img id="nobita" src="img/Nobita.png" style="position:absolute;left:400px; top:400px;" height="100" width="80"/>
+              </fieldset>
+            </div>
+      </div>
+      <script>           
+         function up(){
+            emplement = document.getElementById("nobita");
+            emplement.style.top = parseInt(emplement.style.top) - 5 + 'px';
+        }
+        function dow(){
+            emplement = document.getElementById("nobita");
+            emplement.style.top = parseInt(emplement.style.top) + 5 + 'px';
+        }
+        function left(){
+            emplement = document.getElementById("nobita");
+            emplement.style.left = parseInt(emplement.style.left) - 5 + 'px';
+        }
+        function right(){
+            emplement = document.getElementById("nobita");
+            emplement.style.left = parseInt(emplement.style.left) + 5 + 'px';
+        }
+        function move(evt){
+            x = (navigator.appName==='Netscape')? evt.which : evt.keyCode;
+           switch(x){
+               case 37:
+                   left();
+                   break;
+               case 38: 
+                   up();
+                   break;
+               case 39:
+                   right();
+                   break;
+               case 40:
+                   dow();
+                   break;
+           }
+        }
+        function doReady(){          
+            window.addEventListener('keydown', move);
+        }
+      </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

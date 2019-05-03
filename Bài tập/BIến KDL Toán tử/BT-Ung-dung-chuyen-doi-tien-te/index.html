@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>[Bài tập] Ứng dụng chuyển đổi tiền tệ</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>        
+        .wrapper{
+            width: 960px;
+            margin: auto;
+            border: 0;
+            padding: 10px;
+            background: #eef2fb;
+            height: 650px;
+        }
+        .td{
+            background: #5787d3;
+            padding: 10px;
+            border-radius: 5px;
+            color: azure;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body style="background: #c8d8ee;;">
+      <div class="wrapper">
+            <div class="td">
+                [Bài tập] Ứng dụng chuyển đổi tiền tệ
+                <h5>Hồ Đăng San - C0419H1</h5>
+            </div>
+            <div class="container mt-5">
+                <form action="" name="myform" onsubmit="return(convert());">
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th>Amount</th>
+                                    <th>&nbsp;&nbsp;&nbsp;</th>
+                                    <th>From Currency</th>
+                                    <th>&nbsp;&nbsp;&nbsp;</th>     
+                                    <th>To Currency</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" name="amount" value=""></td>
+                                    <td>&nbsp;&nbsp;&nbsp;</td>
+                                    <td>
+                                        <select name="f">
+                                            <option value="fvietnam">Việt Nam (VND)</option>
+                                            <option value="fmy">Mỹ (USA)</option>
+                                            <option value="ftq">Nhân Dân Tệ (CNY)</option>
+                                            <option value="fnhat">Yên nhật (JPY)</option>
+                                        </select>
+                                    </td>
+                                    <td>&nbsp;&nbsp;&nbsp;</td>
+                                    <td>
+                                        <select name="t">
+                                            <option value="tmy" id="TUSA">Mỹ (USA)</option>
+                                            <option value="tvietnam" id="TVN">Việt Nam (VND)</option>
+                                            <option value="ttq" id="TCNY">Nhân Dân Tệ (CNY)</option>
+                                            <option value="tnhat">Yên nhật (JPY)</option>
+                                        </select>
+                                    </td>
+                                    <td>&nbsp;&nbsp;&nbsp;</td>
+                                    <td><Button class="btn btn-sm btn-success" type="submit">Convert</Button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+            </form>
+            
+            <div class="float-left" style="color: blue">Result: &nbsp;&nbsp;</div><div class="float-left" style="color: blue" id="result"></div>
+    
+            </div>
+      </div>
+      <script>           
+         function convert(){
+            let amount = document.myform.amount.value;
+            let amountFloat = parseFloat(amount);
+            let result;
+            let fvalue = document.myform.f.value;
+            let tvalue = document.myform.t.value;
+            // Tính toán từng trường hợp chuyển đổi
+            if (fvalue === 'fvietnam' && tvalue === 'tmy'){
+                result = amountFloat * (1/23200);
+            } else if (fvalue === 'fvietnam' && tvalue === 'ttq'){
+                result = amountFloat * (1/3400);
+            } else if (fvalue === 'fmy' && tvalue === 'tvietnam'){
+                result = amountFloat * 23200;
+            } else if (fvalue === 'fmy' && tvalue === 'ttq'){
+                result = amountFloat * 6.5;
+            } else if (fvalue === 'ftq' && tvalue === 'tmy'){
+                result = amountFloat * (1/6.5);
+            } else if (fvalue === 'fnhat' && tvalue === 'tmy'){
+                result = amountFloat * (1/112);
+            } else if (fvalue === 'fnhat' && tvalue === 'tvietnam'){
+                result = amountFloat * 207.25;
+            } else if (fvalue === 'fnhat' && tvalue === 'ttq'){
+                result = amountFloat * (1/17);
+            } else if (fvalue === 'fvienam' && tvalue === 'tnhat'){
+                result = amountFloat * (1/207.25);
+            } else if (fvalue === 'fmy' && tvalue === 'tnhat'){
+                result = amountFloat * 112;
+            } else if (fvalue === 'ftq' && tvalue === 'tnhat'){
+                result = amountFloat * 17;
+            } else if (fvalue === 'ftq' && tvalue === 'tvietnam'){
+                result = amountFloat * 3400;
+            } else result = "Faill";
+            document.getElementById("result").innerHTML = result; // trả về giá trị result
+            event.preventDefault(); // Ngăn cản sự kiện submit mặc định
+        }
+      </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>[Bài tập] Máy tính đơn giản</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <div class="wrapper">
+            <div class="td">
+                [Bài tập] Máy tính đơn giản
+                <h5>Hồ Đăng San - C0419H1</h5>
+            </div>
+            <div class="container mt-5">
+              <fieldset class="border p-3">
+                  <legend>Đề Bài</legend>
+                  Luyện tập sử dụng biến, câu lệnh điều kiện, toán tử, xử lý sự kiện chuột. 
+                  Tạo ứng dụng máy tính đơn giản.
+              </fieldset>
+              <fieldset class="border p-3">
+                <legend>Bài Làm</legend>
+                <form>
+                    <div class="container lable">
+                        <div id="lablereturn">
+                            <input id="ketqua" value="" type="text" />
+                        </div>
+                        <div id="buttonstyle">
+                            <div>
+                                <input type="button" class="number" value="1" onclick="ketqua.value += this.value">
+                                <input type="button" class="number"  value="2" onclick="ketqua.value += this.value">
+                                <input type="button" class="number"  value="3" onclick="ketqua.value += this.value">
+                                <input type="button" class="calculation" style="padding-left: 32px;padding-right:39px;"  value="+" onclick="ketqua.value += this.value">
+                            </div>
+                            <div>
+                                <input type="button" class="number"  value="4" onclick="ketqua.value += this.value">
+                                <input type="button" class="number"  value="5" onclick="ketqua.value += this.value">
+                                <input type="button" class="number"  value="6" onclick="ketqua.value += this.value">
+                                <input type="button" class="calculation"  value="-" onclick="ketqua.value += this.value">
+                            </div>
+                            <div>
+                                <input type="button" class="number"  value="7" onclick="ketqua.value += this.value">
+                                <input type="button" class="number"  value="8" onclick="ketqua.value += this.value">
+                                <input type="button" class="number"  value="9" onclick="ketqua.value += this.value">
+                                <input type="button" class="calculation"  value="*" onclick="ketqua.value += this.value">
+                            </div>
+                            <div>
+                                <input type="button" value="C" id="c" onclick="ketqua.value=''">
+                                <input type="button" class="number"  value="0" onclick="ketqua.value += this.value">
+                                <input type="button" id="result" value="=" onclick="ketqua.value=eval(ketqua.value)">
+                                <input type="button" class="calculation" style="padding-left: 32px;padding-right:39px;"  value="/" onclick="ketqua.value += this.value">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+              </fieldset>
+            </div>
+    </div>
+    <script>           
+       
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <div class="d-none">Copyright by &#169; Hồ Đăng San - C0419H1</div>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>[Bài tập] Tính chỉ số cân nặng của cơ thể</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>        
+        .wrapper{
+            width: 960px;
+            margin: auto;
+            border: 0;
+            padding: 10px;
+            background: #eef2fb;
+            height: auto;
+        }
+        .td{
+            background: #5787d3;
+            padding: 10px;
+            border-radius: 5px;
+            color: azure;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body style="background: #c8d8ee;">
+      <div class="wrapper">
+            <div class="td">
+                [Bài tập] Tính chỉ số cân nặng của cơ thể
+                <h5>Hồ Đăng San - C0419H1</h5>
+            </div>
+            <div class="container mt-5">
+              <fieldset class="border p-3">
+                  <legend>Đề Bài</legend>
+                  Chỉ số khối cơ thể (Body mass index-BMI) là một thước đo sức khoẻ dựa trên cân nặng và chiều cao. 
+                  Nó được tính bằng cách lấy cân nặng đơn vị tính kilogam chia cho bình phương của chiều cao đơn vị tính mét. 
+                  Công thức: bmi = weight / height2 <br>
+              </fieldset>
+              <fieldset class="border p-3">
+                <legend>Bài Làm</legend>
+                <form>
+                    <div class="form-group float-left mr-5" style="width:300px">
+                      <label for="cannang">Cân nặng (kg): </label>
+                      <input type="text" name="" id="cannang" class="form-control"> <br>
+                      <label for="chieucao">Chiều cao (m): </label>
+                      <input type="text" name="" id="chieucao" class="form-control"><br>
+                      <input type="submit" id="submit" value="Kiểm tra" class="btn btn-primary">
+                    </div>
+                    <div class="float-left border border-success mt-4 p-2" style="width:500px;height:140px; ">
+                        <span>Chỉ số khối cơ thể (Body mass index-BMI) của bạn là </span><span id="bmi"></span> <br>
+                        <span>Tình trạng: </span><span id="result"></span>
+                    </div>
+                </form>
+              </fieldset>
+            </div>
+      </div>
+    <script>
+        function doReady(){
+            let weight = document.getElementById("cannang");
+            let a = parseFloat(weight.value);
+            let height = document.getElementById("chieucao");
+            let b = parseFloat(height.value);
+            let bmi = a / (b*b);
+            let result = (bmi<18)?"Underweight":(bmi<25)?"Normal":(bmi<30)?"Overweight":"Obese";
+            document.getElementById("bmi").innerHTML = bmi.toPrecision(4);
+            document.getElementById("result").innerHTML = result;
+            event.preventDefault();
+        }
+        document.getElementById("submit").addEventListener("click",doReady);
+        
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
