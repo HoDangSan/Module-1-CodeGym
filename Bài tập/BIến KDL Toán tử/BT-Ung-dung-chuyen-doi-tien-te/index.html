@@ -80,38 +80,61 @@
       </div>
       <script>           
          function convert(){
-            let amount = document.myform.amount.value;
+            let amount = document.myform.amount.value; // lấy giá trị value ở input với name "amout"
             let amountFloat = parseFloat(amount);
             let result;
             let fvalue = document.myform.f.value;
             let tvalue = document.myform.t.value;
+            let isfvietnam = fvalue === 'fvietnam';
+            let isftrungquoc = fvalue === 'ftq';
+            let isfmy = fvalue === 'fmy';
+            let isfnhat = fvalue === 'fnhat';
+            let istvietnam = tvalue === 'tvietnam';
+            let isttrungquoc = tvalue === 'ttq';
+            let istnhat = tvalue === 'tnhat';
+            let istmy = tvalue === 'tmy';
+            const vietmy = 1/23200;
+            const viettq =  (1/3400);
+            const myvietnam = 23200;
+            const mytq = 6.5;
+            const tqmy = 1/6.5;
+            const nhatmy = 1/112;
+            const nhatvietnam = 207.25;
+            const nhattq = 1/17;
+            const vietnamnhat = 1/207.25;
+            const mynhat = 112;
+            const tqnhat = 17;
+            const tqvietnam = 3400;
             // Tính toán từng trường hợp chuyển đổi
-            if (fvalue === 'fvietnam' && tvalue === 'tmy'){
-                result = amountFloat * (1/23200);
-            } else if (fvalue === 'fvietnam' && tvalue === 'ttq'){
-                result = amountFloat * (1/3400);
-            } else if (fvalue === 'fmy' && tvalue === 'tvietnam'){
-                result = amountFloat * 23200;
-            } else if (fvalue === 'fmy' && tvalue === 'ttq'){
-                result = amountFloat * 6.5;
-            } else if (fvalue === 'ftq' && tvalue === 'tmy'){
-                result = amountFloat * (1/6.5);
-            } else if (fvalue === 'fnhat' && tvalue === 'tmy'){
-                result = amountFloat * (1/112);
-            } else if (fvalue === 'fnhat' && tvalue === 'tvietnam'){
-                result = amountFloat * 207.25;
-            } else if (fvalue === 'fnhat' && tvalue === 'ttq'){
-                result = amountFloat * (1/17);
-            } else if (fvalue === 'fvienam' && tvalue === 'tnhat'){
-                result = amountFloat * (1/207.25);
-            } else if (fvalue === 'fmy' && tvalue === 'tnhat'){
-                result = amountFloat * 112;
-            } else if (fvalue === 'ftq' && tvalue === 'tnhat'){
-                result = amountFloat * 17;
-            } else if (fvalue === 'ftq' && tvalue === 'tvietnam'){
-                result = amountFloat * 3400;
-            } else result = "Faill";
-            document.getElementById("result").innerHTML = result; // trả về giá trị result
+            if (isfvietnam && istmy){
+                result = amountFloat * vietmy;
+            } else if (isfvietnam && isttrungquoc){
+                result = amountFloat * viettq ;
+            } else if (isfmy && istvietnam){
+                result = amountFloat * myvietnam;
+            } else if (isfmy && isttrungquoc){
+                result = amountFloat * mytq;
+            } else if (isftrungquoc && istmy){
+                result = amountFloat * tqmy;
+            } else if (isfnhat && istmy){
+                result = amountFloat * nhatmy;
+            } else if (isfnhat && istvietnam){
+                result = amountFloat * nhatvietnam;
+            } else if (isfnhat && isttrungquoc){
+                result = amountFloat * nhattq;
+            } else if (isfvietnam && istnhat){
+                result = amountFloat * vietnamnhat;
+            } else if (isfmy && istnhat){
+                result = amountFloat * mynhat ;
+            } else if (isftrungquoc && istnhat){
+                result = amountFloat * tqnhat;
+            } else if (isftrungquoc && istvietnam){
+                result = amountFloat * tqvietnam;
+            } else result = amountFloat;
+            if (amountFloat >= 0){
+                document.getElementById("result").innerHTML = result; // trả về giá trị result
+                event.preventDefault(); // Ngăn cản sự kiện submit mặc định
+            }else document.getElementById("result").innerHTML = "Error";
             event.preventDefault(); // Ngăn cản sự kiện submit mặc định
         }
       </script>
