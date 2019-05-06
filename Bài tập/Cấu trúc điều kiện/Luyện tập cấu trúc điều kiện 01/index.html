@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>[*Bài tập] Luyện tập cấu trúc điều kiện 01</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background: #c8d8ee;
+        }       
+        .wrapper{
+            width: 960px;
+            margin: auto;
+            border: 0;
+            padding: 10px;
+            background: #eef2fb;
+            height: auto;
+        }
+        .td{
+            background: #5787d3;
+            padding: 10px;
+            border-radius: 5px;
+            color: azure;
+            font-size: 30px;
+            text-align: center;
+        }       
+    </style>
+</head>
+<body>
+      <div class="wrapper">
+            <div class="td">
+                [*Bài tập] Luyện tập cấu trúc điều kiện 01
+                <h5>Hồ Đăng San - C0419H1</h5>
+            </div>
+            <div class="container mt-5">
+              <fieldset class="border p-3">
+                  <legend>Đề Bài</legend>
+                  Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không <br>
+
+                Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.<br>
+
+                Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0<br>
+
+                Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó<br>
+
+                Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ<br>
+
+                Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng<br>
+
+                Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho <br>
+              </fieldset>
+              <fieldset class="border p-3">
+                <legend>Bài Làm</legend>
+                Bài 1: <br><br>
+                <form>
+                    Nhập a <br>
+                    <input type="text" id='a'> <br><br>
+                    Nhập b <br>
+                    <input type="text" id='b'> <br><br>
+                    <input type="button" class="btn btn-success" onclick="kiemtraab()" value="Kiểm Tra">
+                </form>
+                Bài 2: <br><br>
+                <form action="">
+                    Nhập tuổi <br>
+                    <input type="text" id='tuoi'> <br> <br>
+                    <input type="button" class="btn btn-success" onclick="kiemtratuoi()" value="Kiểm Tra">                    
+                </form>
+                Bài 3: <br><br>
+                <form action="">
+                    Nhập số nguyên <br>
+                    <input type="text" id="ktsonguyen"> <br><br>
+                    <input type="button" class="btn btn-success" onclick="kiemtrasonguyen()" value="Kiểm Tra">
+                </form>
+                Bài 4: <br><br>
+                <form action="">
+                    Nhập số đầu tiên <br>
+                    <input type="text" id="a1"> <br><br>
+                    Nhập số thứ hai <br>
+                    <input type="text" id="a2"> <br><br>
+                    Nhập số thứ ba <br>
+                    <input type="text" id="a3"> <br> <br>
+                    <input type="button" class="btn btn-success" onclick="kiemtramax()" value="Kiểm Tra">
+                </form>
+                Bài 5: <br><br>
+                <form action="">
+                    Nhập điểm kiểm tra lần 1: <br>
+                    <input type="text" id="diemkt1"> <br><br>
+                    Nhập điểm kiểm tra lần 2: <br>
+                    <input type="text" id="diemkt2"> <br><br>
+                    Nhập điểm kiểm tra lần 3: <br>
+                    <input type="text" id="diemkt3"> <br><br>
+                    Nhập điểm giữa kì: <br>
+                    <input type="text" id="diemgiuaki"> <br><br>
+                    Nhập điểm cuối kì: <br>
+                    <input type="text" id="diemcuoiki"> <br><br>
+                    <input type="button" class="btn btn-success" onclick="kiemtradiem()" value="Kiểm Tra">
+                </form>
+                Bài 6: <br><br>
+                <form action="">
+                    Nhập doanh số: <br>
+                    <input type="text" id="doanhso"> <br><br>
+                    <input type="button" class="btn btn-success" onclick="kiemtrahoahong()" value="Kiểm Tra">
+                </form>
+                Bài 7: <br><br>
+                <form action="">
+                    Nhập số phút gọi nội mạng: <br>
+                    <input type="text" id="noimang"> <br><br>
+                    Nhập số phút gọi ngoại mạng: <br>
+                    <input type="text" id="ngoaimang"><br><br>
+                    <input type="button" class="btn btn-success" onclick="kiemtratiendt()" value="Kiểm Tra">
+                </form>
+                
+              </fieldset>
+            </div>
+    </div>
+    <div class="d-none">Copyright by &#169; Hồ Đăng San - C0419H1</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

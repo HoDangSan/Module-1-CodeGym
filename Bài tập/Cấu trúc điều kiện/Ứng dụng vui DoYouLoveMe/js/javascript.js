@@ -4,9 +4,9 @@ function getRdn(min,max){
 
 
 
-document.getElementById("khong").onclick = function(){
+document.getElementById("khong").onmouseover = function(){
     let element = document.getElementById("khong");
-    element.style.top = parseInt(element.style.top) + 500 + 'px';
+    element.style.top = parseInt(element.style.top) + getRdn(300,600) + 'px';
     element.style.top = parseInt(element.style.top) - getRdn(300,600) + 'px';
     element.style.left = parseInt(element.style.left) + getRdn(300,600) + 'px';
     element.style.left = parseInt(element.style.left) - getRdn(300,600) + 'px';
