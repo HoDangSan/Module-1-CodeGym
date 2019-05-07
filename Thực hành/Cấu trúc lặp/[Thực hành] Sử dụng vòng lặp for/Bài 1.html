@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>[Thực hành] Sử dụng vòng lặp for</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            background: #c8d8ee;
+        }       
+        .wrapper{
+            width: 960px;
+            margin: auto;
+            border: 0;
+            padding: 10px;
+            background: #eef2fb;
+            height: auto;
+        }
+        .td{
+            background: #5787d3;
+            padding: 10px;
+            border-radius: 5px;
+            color: azure;
+            font-size: 30px;
+            text-align: center;
+        }       
+    </style>
+</head>
+<body>
+      <div class="wrapper">
+            <div class="td">
+                [Thực hành] Sử dụng vòng lặp for
+                <h5>Hồ Đăng San - C0419H1</h5>
+            </div>
+            <div class="container mt-5">
+              <fieldset class="border p-3">
+                  <legend>Đề Bài</legend>
+                  Bài 1: Viết chương trình hiển thị chuỗi “The number is N” 5 lần sử dụng vòng lặp for. 
+                  Với N sẽ hiển thị từ 0 đến 5. <br>
+                  Bài 2: Viết chương trình nhập vào một số bất kỳ lớn hơn 0. 
+                  Tính tổng các phần tử từ 1 đến số vừa nhập vào. <br>
+
+              </fieldset>
+              <fieldset class="border p-3">
+                <legend>Bài Làm</legend>
+                Bài 1: <br>
+                <h2>JavaScript Loops</h2>
+                <p id="demo"></p>
+                <script>
+                let text = "";
+                let i;
+                for (i = 0; i < 5; i++) {
+                    text += "The number is " + i + "<br>";
+                }
+                document.getElementById("demo").innerHTML = text;
+                </script>   
+                <br>
+                Bài 2: <br>
+                <input type="text" name="" id="number"> <br><br>
+                <input type="button" name="" id="equal" value="Enter">
+                <h3>Kết quả: </h3> <div id="result"></div>
+              </fieldset>
+            </div>
+    </div>
+    <script>    
+        document.getElementById("equal").onclick = function(){
+            let result = 0;      
+            let num = parseInt(document.getElementById("number").value);
+            for (let i = 1; i <= num; i++) {
+                result += i;
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <div class="d-none">Copyright by &#169; Hồ Đăng San - C0419H1</div>
+  </body>
+</html>

@@ -25,10 +25,8 @@ function getRndimg(min,max,img){   // hàm lấy giá trị số tự nhiên ng�
 }
 function ReturnSRC(idimg,o){            // hàm thay đổi hình ảnh ngẫu nhiên khi click vào img có id là idimg
     let valueimg = document.getElementById(idimg).alt; // lấy alt
-    console.log(valueimg);
     let indexing = getIndexByImg(valueimg,o); // Lấy chỉ số trong ô mảng tương ứng với giá trị của alt với o[i]
     result = getRndimg(0,4,indexing); //lấy số ngẫu nhiên trong khoang 0-3 
-    console.log(result);
     document.getElementById(idimg).src = o[result];
     document.getElementById(idimg).alt = o[result]; 
     test();          

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>[Thực hành] Sử dụng vòng lặp lồng nhau</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            background: #c8d8ee;
+        }       
+        .wrapper{
+            width: 960px;
+            margin: auto;
+            border: 0;
+            padding: 10px;
+            background: #eef2fb;
+            height: auto;
+        }
+        .td{
+            background: #5787d3;
+            padding: 10px;
+            border-radius: 5px;
+            color: azure;
+            font-size: 30px;
+            text-align: center;
+        }       
+    </style>
+</head>
+<body>
+      <div class="wrapper">
+            <div class="td">
+                [Thực hành] Sử dụng vòng lặp lồng nhau
+                <h5>Hồ Đăng San - C0419H1</h5>
+            </div>
+            <div class="container mt-5">
+              <fieldset class="border p-3">
+                  <legend>Đề Bài</legend>
+                
+              </fieldset>
+              <fieldset class="border p-3">
+                <legend>Bài Làm</legend>
+                <h1>Sử dụng for</h1>
+                <div id="table1"></div>
+                <h1>Sử dụng while</h1> 
+                <div id="table2"></div>
+                <script>
+                    let table = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+                    for(let i = 1; i < 10; i++){
+                        table += "<tr>";
+                        for (j = 1; j <= 10; j++) {
+                            table += "<td>" + i * j + "</td>";
+                        }
+                        table += "</tr>";
+                    }
+                    document.getElementById("table1").innerHTML = table;
+            
+                    let i1 = 1;
+                    let j1 = 1;
+                    let table2 = "<br><table border='1' width='300' cellspacing='0' cellpadding='3'>";
+                    while(i1 < 10){
+                        table2 += "<tr>";
+                        while(j1 < 10){
+                            table2 += "<td>" + i1 * j1 + "</td>";
+                            j1++;
+                        }
+                        table2 += "</tr>";
+                        j1 = 1;
+                        i1++;
+                    }
+                    document.getElementById("table2").innerHTML = table2;
+                </script>
+              </fieldset>
+            </div>
+    </div>
+    <script>           
+             
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <div class="d-none">Copyright by &#169; Hồ Đăng San - C0419H1</div>
+  </body>
+</html>

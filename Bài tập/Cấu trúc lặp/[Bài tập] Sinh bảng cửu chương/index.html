@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>[Bài tập] Ứng dụng vui DoYouLoveMe</title>
+    <title>[Bài tập] Sinh bảng cửu chương</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +16,7 @@
             border: 0;
             padding: 10px;
             background: #eef2fb;
-            height: 650px;
+            height: auto;
         }
         .td{
             background: #5787d3;
@@ -31,31 +31,37 @@
 <body>
       <div class="wrapper">
             <div class="td">
-              [Bài tập] Ứng dụng vui DoYouLoveMe
+                [Bài tập] Sinh bảng cửu chương
                 <h5>Hồ Đăng San - C0419H1</h5>
             </div>
             <div class="container mt-5">
               <fieldset class="border p-3">
                   <legend>Đề Bài</legend>
-                  Hãy viết ứng dụng vui có tên "Do You Love Me"  <br>
-                  Mô tả tính năng: <br>
-                  + Khi người dùng click chuột vào nút YES thì sẽ hiển thị thông báo:  <br>
-                  + Khi người dùng di chuột lên nút NO thì nút NO sẽ nhảy sang một vị trí khác ngẫu nhiên trên màn hình. 
-                  Kết quả là người dùng không thể click được chuột vào nút NO. <br>
+                
               </fieldset>
               <fieldset class="border p-3">
                 <legend>Bài Làm</legend>
-                <h5>Click vào chơi ngay để vào game</h5>
-                <a href="vaogame.html" target="_blank"><button>chơi ngay</button></a>
+                <center><h1>Bảng cửu chương</h1></center>
+                <div id="table"></div>
               </fieldset>
             </div>
     </div>
-    <div class="d-none">Copyright by &#169; Hồ Đăng San - C0419H1</div>
+    <script>           
+        let table = "<table class='table table-bordered'>";
+        for(let i = 1; i < 11; i++){
+            table += "<tr>";
+            for(let j = 2; j < 10; j++){
+                table += "<td> " + j + " x " + i + " = " + j*i + "</td>";
+            }
+            table += "</tr>";
+        }
+        document.getElementById("table").innerHTML = table;
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <div class="d-none">Copyright by &#169; Hồ Đăng San - C0419H1</div>
   </body>
 </html>

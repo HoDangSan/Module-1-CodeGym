@@ -5,13 +5,14 @@ function Test(a){
     let result;
     switch (a) {
         case "good":
-            if (good===false)
+            if (good===false){
                 if(cheap===false) 
                     if(fast===false)
                         result = "Click vào những mục bên trái để xem kết quả";
                     else result = "Giao hàng nhanh chóng và hiệu quả";
                 else result = "Giá thành siêu rẻ";
-            else
+            }
+            else{
                 if(cheap===false) 
                     if(fast===false)
                         result = "Chất lượng khỏi phải bàn. Cực tốt :)";
@@ -23,15 +24,17 @@ function Test(a){
                         document.getElementById('fast').checked = false;
                         result = "Muốn tốt và rẻ thì giao hàng chậm hơn";
                     }
+            }
             break;
         case "cheap":
-            if (cheap===false)
+            if (cheap===false){
                     if(good===false) 
                         if(fast===false)
                             result = "Click vào những mục bên trái để xem kết quả";
                         else result = "Giao hàng nhanh chóng và hiệu quả";
                     else result = "Chất lượng khỏi phải bàn. Cực tốt :) ";
-            else
+            }
+            else{
                 if(good===false) 
                     if(fast===false)
                         result = "Giá thành siêu rẻ";
@@ -44,14 +47,16 @@ function Test(a){
                         result = "Nhanh và rẻ thì chất lượng kém";
                     }
                 break;
+            }
         case "fast":
-            if (fast===false)
+            if (fast===false){
                 if(good===false) 
                     if(cheap===false)
                         result = "Click vào những mục bên trái để xem kết quả";
                     else result = "Giá thành siêu rẻ";
                 else result = "Chất lượng khỏi phải bàn. Cực tốt :) ";
-            else
+            }
+            else{
                 if(good===false) 
                     if(cheap===false)
                         result = "Giao hàng nhanh chóng và hiệu quả";
@@ -64,6 +69,7 @@ function Test(a){
                         result = "Muốn tốt và nhanh thì giá đắt";
                     }
             break;
+            }
         default:
             alert("ERR");
             break;

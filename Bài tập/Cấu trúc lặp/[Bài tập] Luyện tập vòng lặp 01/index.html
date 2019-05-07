@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>[*Bài tập] Luyện tập vòng lặp 01</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            background: #c8d8ee;
+        }       
+        .wrapper{
+            width: 960px;
+            margin: auto;
+            border: 0;
+            padding: 10px;
+            background: #eef2fb;
+            height: auto;
+        }
+        .td{
+            background: #5787d3;
+            padding: 10px;
+            border-radius: 5px;
+            color: azure;
+            font-size: 30px;
+            text-align: center;
+        }       
+    </style>
+</head>
+<body>
+      <div class="wrapper">
+            <div class="td">
+                    [*Bài tập] Luyện tập vòng lặp 01
+                <h5>Hồ Đăng San - C0419H1</h5>
+            </div>
+            <div class="container mt-5">
+              <fieldset class="border p-3">
+                  <legend>Đề Bài</legend>
+                
+              </fieldset>
+              <fieldset class="border p-3">
+                <legend>Bài Làm</legend>
+                
+                <h5>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.</h5>
+                <button class="btn btn-success" onclick="countNumber()">Thực thi</button><br>
+                <div id="result"></div> <br><br>
+                
+                <h5>Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. 
+                    Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
+                </h5>
+                <button class="btn btn-success" onclick="(temperature())">Thực thi</button><br><br><br>
+                
+                <h5>Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</h5>
+                <button class="btn btn-success" onclick="soFibonacci()">Thực thi</button><br>
+                <div id="resultFib"></div> <br><br>
+                
+                <h5>Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</h5>
+                <button class="btn btn-success" onclick="fibonaccidivi5()">Thực thi</button><br><br><br>
+                
+                <h5>Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.</h5>
+                <button class="btn btn-success" onclick="sumFibonacci20()">Thực thi</button><br><br><br>
+                
+                <h5>Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.</h5>
+                <button class="btn btn-success" onclick="sum30Divi7()">Thực thi</button><br><br><br>
+
+                <h5>Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. 
+                    Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. 
+                    Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".
+                </h5>
+                <button class="btn btn-success" onclick="fizzBuzz()">Thực thi</button><br>
+                <div id="resultfizzbuzz"></div><br><br>
+
+
+              </fieldset>
+            </div>
+    </div>
+    <script>     
+        function countNumber(){
+            let result = "";
+            for(let i = 1; i < 101; i++){
+                result += i + "  ";
+                if (i === 99) alert("Đã hoàn thành!");
+            }
+            document.getElementById("result").innerHTML = result;
+        }   
+
+        function temperature(){
+            let temp = parseFloat(prompt("Nhập nhiệt độ"));
+            while (temp < 20 || temp > 100){
+                temp = parseFloat(prompt("Nhập nhiệt độ"));
+            }
+            alert("Nhiệt độ bình thường!")
+        }
+
+        function fibonacci(n){
+            return (n === 1)?1:(n === 2)?2:(fibonacci(n-1) + fibonacci(n-2));
+        }
+
+        function soFibonacci(){
+            let number = parseInt(prompt("Nhập số số Fibonacci"));
+            let result = "";
+            for(let i = 1; i <= number; i++) {
+                result += "  " + fibonacci(i);
+            }
+            document.getElementById("resultFib").innerHTML = result;
+        }
+
+        function fibonaccidivi5(){
+            let fib;
+            let i = 1;
+            while(1){
+                fib = fibonacci(i);
+                if (fib % 5 === 0){
+                    alert("Số fibonacci đầu tiên chia hết cho 5 là: " + fib);
+                    break;
+                }
+                i++  
+            }
+        }
+        
+        function sumFibonacci20(){
+            let fib = 0;
+            for(let i = 1; i <= 20; i++) {
+                fib += fibonacci(i);
+            }
+            alert("Tổng 20 số Fibonacci đầu tiên là: " + fib);
+        }
+
+        function sum30Divi7(){
+            let sum = 0;
+            let count = 0;
+            let i = 0;
+            while(count < 30){
+
+                if(i % 7 === 0){
+                    sum += i;
+                    count++;
+                } 
+
+                i++;
+            }
+            alert("Tổng 30 số tự nhiên đầu tiên chia hết cho 7 là " + sum);
+        }
+
+        function fizzBuzz(){
+            alert(123);
+            let result = "Kết quả là : ";
+            for(let i = 1; i <= 100; i++){
+                if (i % 3 ===0) result +="Fizz  ";
+                else if (i % 5 == 0) result += "Buzz  ";
+                     else if (i % 3 === 0 && i % 5 === 0) result += "FizzBuzz  ";
+                          else result += i + "  ";
+            }
+            document.getElementById("resultfizzbuzz").innerHTML = result;
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <div class="d-none">Copyright by &#169; Hồ Đăng San - C0419H1</div>
+  </body>
+</html>
