@@ -11,7 +11,6 @@ Rectangle.prototype.perimeter = function(){
     return (this.height + this.width) * 2;
 }
 Rectangle.prototype.draw = function(context){
-    context.beginPath();
     context.fillStyle = "blue";
     context.fillRect(this.rx,this.ry,this.width,this.height);
 }

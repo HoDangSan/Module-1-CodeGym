@@ -1,0 +1,12 @@
+#myBoard{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 400px;
+}
+.cell{
+    border: solid 1px black;
+    text-align: center;
+    font-size:15pt;
+    cursor: pointer;
+    color: red;
+}

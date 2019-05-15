@@ -6,6 +6,7 @@ function Ball(image, top, left, size){
   this.speedx = 3;
   this.speedy = 3;
 }
+
   Ball.prototype.getBallElement = function(){
     return '<img width="'+ this.size + '"' +
       ' height="'+ this.size + '"' +
