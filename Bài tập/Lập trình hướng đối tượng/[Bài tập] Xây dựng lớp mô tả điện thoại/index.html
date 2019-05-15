@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>[Bài tập] Xây dựng lớp mô tả điện thoại</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="js/mobile.js"></script>
+    <script src="js/doSomeThing.js"></script>
+    <style>
+        body{
+            background: #c8d8ee;
+        }       
+        .wrapper{
+            width: 960px;
+            margin: auto;
+            border: 0;
+            padding: 10px;
+            background: #eef2fb;
+            height: 650px;
+        }
+        .td{
+            background: #5787d3;
+            padding: 10px;
+            border-radius: 5px;
+            color: azure;
+            font-size: 30px;
+            text-align: center;
+        }       
+    </style>
+</head>
+<body onload="ready()">
+  <div class="wrapper">
+    <div class="td">
+        [Bài tập] Xây dựng lớp mô tả điện thoại
+        <h5>Hồ Đăng San - C0419H1</h5>
+    </div>
+    <div class="container mt-5">
+      <fieldset class="border p-3">
+          <legend>Đề Bài</legend>
+        
+      </fieldset>
+      <fieldset class="border p-3">
+        <legend>Bài Làm</legend>
+          <div class="row">
+            <div class="col-md-6">
+              <!-- star mobi -->
+              <div class="mobi">
+                <div class="status">
+                  <span class="onoff">Status: <span id="nokiaStatus">ON</span></span>
+                  <span class="pin">Pin: <span id="nokiaPin">100%</span></span>
+                  <div style="clear: left"></div>
+                </div>
+                <div class="buttoncha">
+                  <input type="button" id="nokiaMess" class="button" value="Messaging">
+                  <input type="button" id="nokiaToSent" class="button" value="ToSent">
+                  <input type="button" id="nokiaInbox" class="button" value="InBox">
+                  <input type="button" id="nokiaSent" class="button" value="Sent">
+                  <input type="button" id="nokiaOnOff" value="On/Off" class="button">
+                </div>
+                <div class="input pb-0"> 
+                  <input type="text" id="nokiaInput" value="">
+                </div>
+                <div class="charge">
+                  <center><input type="button"  value="charge" id="nokiaCharge"></center>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mobi" style="border: 2px solid red;">
+                    <div class="status">
+                      <span class="onoff">Status: <span id="iphoneStatus">ON</span></span>
+                      <span class="pin">Pin: <span id="iphonePin">100%</span></span>
+                      <div style="clear: left"></div>
+                    </div>
+                    <div class="buttoncha">
+                      <input type="button" id="iphoneMess" class="button" value="Messaging">
+                      <input type="button" id="iphoneToSent" class="button" value="ToSent">
+                      <input type="button" id="iphoneInbox" class="button" value="InBox">
+                      <input type="button" id="iphoneSent" class="button" value="Sent">
+                      <input type="button" value="On/Off" class="button" id="iphoneOnOff">
+                    </div>
+                    <div class="input pb-0"> 
+                      <input type="text" id="iphoneInput">
+                    </div>
+                    <div class="charge">
+                      <center><input type="button"  value="charge" id="iphoneCharge"></center>
+                      
+                    </div>
+                  </div>
+            </div>
+          </div>
+      </fieldset>
+    </div>
+  </div>
+  <div class="d-none">Copyright by &#169; Hồ Đăng San - C0419H1</div>
+</body>
+<script>           
+            
+</script>
+</html>
