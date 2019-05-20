@@ -1,0 +1,9 @@
+#myCanvas{
+    border:3px outset #d3d3d3;
+    background-color: lightsteelblue;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+#driver{
+    width: 100px;
+}

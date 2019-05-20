@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <title>[Bài tập] Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="js.js"></script>
     <style>
-        body{
+        body {
             background: #c8d8ee;
-        }       
-        .wrapper{
+        }
+        
+        .wrapper {
             width: 960px;
             margin: auto;
             border: 0;
@@ -19,43 +21,68 @@
             background: #eef2fb;
             height: 650px;
         }
-        .td{
+        
+        .td {
             background: #5787d3;
             padding: 10px;
             border-radius: 5px;
             color: azure;
             font-size: 30px;
             text-align: center;
-        }       
+        }
     </style>
 </head>
+
 <body>
-  <div class="wrapper">
-    <div class="td">
-        [Bài tập] Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva
-        <h5>Hồ Đăng San - C0419H1</h5>
+    <div class="wrapper">
+        <div class="td">
+            [Bài tập] Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva
+            <h5>Hồ Đăng San - C0419H1</h5>
+        </div>
+        <div class="container mt-5">
+            <fieldset class="border p-3">
+                <legend>Đề Bài</legend>
+
+            </fieldset>
+            <fieldset class="border p-3">
+                <legend>Bài Làm</legend>
+                <button class="btn btn-danger" id="adam">Adam</button>
+                <div id="apple"></div>
+                <button class="btn btn-success" id="eva">Eva</button> <br> Weight Adam:
+                <div id="wadam"></div> <br> Weight Eva:
+                <div id="weva"></div>
+            </fieldset>
+        </div>
     </div>
-    <div class="container mt-5">
-      <fieldset class="border p-3">
-          <legend>Đề Bài</legend>
-        
-      </fieldset>
-      <fieldset class="border p-3">
-        <legend>Bài Làm</legend>
-        
-      </fieldset>
-    </div>
-  </div>
-  <div class="d-none">Copyright by &#169; Hồ Đăng San - C0419H1</div>
+    <div class="d-none">Copyright by &#169; Hồ Đăng San - C0419H1</div>
 </body>
-<script>           
+<script>
     let apple = new Apple();
-    alert("weight apple: " + apple.weight);
-    let human = new Human();
-    alert("Name: " + human.name + "---- Weight human: " + human.weight);
-    human.tall();
-    human.eatApple(apple);
-    alert("Weight human: " + human.weight + "-----weight apple: " + apple.weight);
-               
+    let adam = new Human("Adam", "nam", 50);
+    let eva = new Human("Eva", "nu", 40);
+    let appleHtml = document.getElementById("apple");
+    appleHtml.innerHTML = apple.weight;
+    let wadam = document.getElementById("wadam");
+    let weva = document.getElementById("weva");
+    wadam.innerHTML = adam.weight;
+    weva.innerHTML = eva.weight;
+    document.getElementById("adam").onclick = function() {
+        appleHtml = document.getElementById("apple");
+        adam.eat(apple);
+        appleHtml.innerHTML = apple.weight;
+        wadam = document.getElementById("wadam");
+        wadam.innerHTML = adam.weight;
+        adam.tall("'Nhăm Nhăm! Tôi mới cắn một miếng!' Adam said");
+    }
+
+    document.getElementById("eva").onclick = function() {
+        appleHtml = document.getElementById("apple");
+        eva.eat(apple);
+        appleHtml.innerHTML = apple.weight;
+        weva = document.getElementById("weva");
+        weva.innerHTML = eva.weight;
+        eva.tall("'Nhăm Nhăm! Tôi mới cắn một miếng!' Eva said");
+    }
 </script>
+
 </html>
