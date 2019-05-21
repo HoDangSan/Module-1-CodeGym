@@ -1,23 +1,32 @@
-let Apple = function() {
-    this.weight = 10;
-    this.decrease = function() {
+class Apple {
+    constructor() {
+        this.weight = 10;
+    }
+
+    decrease() {
         this.weight--;
     }
-    this.isEmpty = function() {
+
+    isEmpty() {
         return (this.weight <= 0) ? false : true;
     }
-    this.getweight = function() {
+
+    getweight() {
         return this.weight;
     }
 }
-let Human = function(name, sex, weight) {
-    this.name = name;
-    this.sex = sex;
-    this.weight = weight;
-    this.tall = function(tall) {
+class Human {
+    constructor(name, sex, weight) {
+        this.name = name;
+        this.sex = sex;
+        this.weight = weight;
+    }
+
+    tall(tall) {
         console.log(tall);
     }
-    this.eat = function(apple) {
+
+    eat(apple) {
         if (apple.isEmpty()) {
             apple.weight--;
             this.weight++;

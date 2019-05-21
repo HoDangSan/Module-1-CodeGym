@@ -1,14 +1,17 @@
-function Remote() {
-    this.id = "";
-    this.increaseVolume = function(tivi) {
+class Remote {
+    constructor() {
+        this.id = "";
+    }
+
+    increaseVolume(tivi) {
         if (tivi.volume < 100)
             tivi.volume++;
     }
-    this.reductionVolume = function(tivi) {
+    reductionVolume(tivi) {
         if (tivi.volume > 0)
             tivi.volume--;
     }
-    this.convertChannels = function(tivi) {;
+    convertChannels(tivi) {
         switch (this.id) {
             case "1":
                 return tivi.channels[1];

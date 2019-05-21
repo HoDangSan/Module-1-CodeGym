@@ -1,13 +1,13 @@
-let _context;
-let _rectangle;
-let _canvas;
-window.onload = function(){
-    _canvas = document.getElementById("myCanvas");
-    _context = _canvas.getContext("2d");
-    _rectangle = new Rectangle(10,10,100,200);
-    _rectangle.draw(_context);
-    _rectangle.setHeight(300);
-    _rectangle.setWidth(600);
-    _context.font = "30px Arial";
-    _context.fillText("Area: " + _rectangle.area() + "   " + "Perimeter: " + _rectangle.perimeter(),10,350);
+let context;
+let rectangle;
+let canvas;
+window.onload = function() {
+    canvas = document.getElementById("myCanvas");
+    context = canvas.getContext("2d");
+    rectangle = new Rectangle(10, 10, 100, 200);
+    rectangle.draw(context);
+    rectangle.setHeight(300);
+    rectangle.setWidth(600);
+    context.font = "30px Arial";
+    context.fillText("Area: " + rectangle.area() + "   " + "Perimeter: " + rectangle.perimeter(), 10, 350);
 }

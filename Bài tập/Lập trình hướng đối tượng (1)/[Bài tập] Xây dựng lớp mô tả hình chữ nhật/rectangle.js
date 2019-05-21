@@ -1,27 +1,29 @@
-function Rectangle(rx, ry, height, width) {
-    this.height = height;
-    this.width = width;
-    this.rx = rx;
-    this.ry = ry;
+class Rectangle {
+    constructor(rx, ry, height, width) {
+        this.height = height;
+        this.width = width;
+        this.rx = rx;
+        this.ry = ry;
+    }
 
-    this.area = function() {
+    area() {
         return this.height * this.width;
     }
 
-    this.perimeter = function() {
+    perimeter() {
         return (this.height + this.width) * 2;
     }
 
-    this.draw = function(context) {
+    draw(context) {
         context.fillStyle = "blue";
         context.fillRect(this.rx, this.ry, this.width, this.height);
     }
 
-    this.setHeight = function(height) {
+    setHeight(height) {
         this.height = height;
     }
 
-    this.setWidth = function(width) {
+    setWidth(width) {
         this.width = width;
     }
 }

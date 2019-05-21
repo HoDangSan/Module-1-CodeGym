@@ -1,12 +1,14 @@
-function Temperature(c) {
-    this.c = c;
+class Temperature {
+    constructor(c) {
+        this.c = c;
+    }
 
-    this.cToF = function() {
+    cToF() {
         let c0 = this.c;
         return (9 * c0) / 5 + 32;
     }
 
-    this.cToH = function() {
+    cToH() {
         let c1 = this.c;
         return c1 + 273.15;
     }

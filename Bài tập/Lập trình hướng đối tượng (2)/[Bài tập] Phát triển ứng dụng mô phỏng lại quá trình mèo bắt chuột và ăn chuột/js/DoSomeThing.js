@@ -43,9 +43,9 @@ function catMove(event) {
 function updateAll() {
     context.clearRect(0, 0, canvas.width, canvas.height);
     cat.draw(context);
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 100; i++) {
         update(rat[i]);
-        if (rat[i].rx >= (cat.cx - (cat.width / 2)) && rat[i].rx <= (cat.cx + (cat.width / 2)) && rat[i].ry >= (cat.cy - (cat.height / 2)) && rat[i].ry <= (cat.cy + (cat.height / 2))) {
+        if (rat[i].rx >= (cat.cx) && rat[i].rx <= (cat.cx + cat.width / 2) && rat[i].ry >= (cat.cy) && rat[i].ry <= (cat.cy + cat.height / 2)) {
             rat.splice(i, 1);
             cat.width += 1;
             cat.height += 1;
@@ -67,7 +67,7 @@ window.onload = function() {
     canvas = document.getElementById("myCanvas");
     context = canvas.getContext("2d");
     cat = new Cat("Cat", 5, CatImg);
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 100; i++) {
         rat[i] = new Rat("Rat " + i, 1, RatImg);
     }
     ratmove = setInterval(updateAll, 10);

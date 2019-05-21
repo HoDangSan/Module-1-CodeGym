@@ -1,43 +1,44 @@
-function Mobile() {
-    this.pin = 0;
-    this.messagerWriting = "";
-    this.inbox = [];
-    this.sentMessager = [];
-    this.status = false;
-
-    this.checkStatusOnOff = function() {
+class Mobile {
+    constructor() {
+        this.pin = 0;
+        this.messagerWriting = "";
+        this.inbox = [];
+        this.sentMessager = [];
+        this.status = false;
+    }
+    checkStatusOnOff() {
         return (this.status === true) ? true : false;
     }
 
-    this.turnOnOff = function(status) {
+    turnOnOff(status) {
         this.status = (status === 1) ? true : false;
     }
 
-    this.charge = function() {
+    charge() {
         setInterval(function() {
             if (this.pin >= 0 && this.pin <= 100)
                 this.pin += 1;
         }, 5000);
     }
 
-    this.writingMessager = function(mess) {
+    writingMessager(mess) {
         this.messagerWriting = mess;
     }
 
-    this.toInbox = function(mess) {
+    toInbox(mess) {
         this.inbox.push(mess);
     }
 
-    this.sentingMessager = function() {
+    sentingMessager() {
         this.sentMessager.push(this.messagerWriting);
         return this.messagerWriting;
     }
 
-    this.getInbox = function() {
+    getInbox() {
         return this.inbox.join("######");
     }
 
-    this.getSentMessager = function() {
+    getSentMessager() {
         return this.sentMessager.join("######");
     }
 }

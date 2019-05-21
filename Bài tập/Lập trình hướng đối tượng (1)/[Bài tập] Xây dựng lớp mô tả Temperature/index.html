@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>TIÊUĐỀ</title>
+
+<head>
+    <title>Chuyển đổi C- F - K</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,10 +10,11 @@
     <script src="js/Temperature.js"></script>
     <script src="js/doSomeThing.js"></script>
     <style>
-        body{
+        body {
             background: #c8d8ee;
-        }       
-        .wrapper{
+        }
+        
+        .wrapper {
             width: 960px;
             margin: auto;
             border: 0;
@@ -20,42 +22,44 @@
             background: #eef2fb;
             height: 650px;
         }
-        .td{
+        
+        .td {
             background: #5787d3;
             padding: 10px;
             border-radius: 5px;
             color: azure;
             font-size: 30px;
             text-align: center;
-        }       
+        }
     </style>
 </head>
-<body onload="ready()">
-  <div class="wrapper">
-    <div class="td">
-        TÊNBÀI
-        <h5>Hồ Đăng San - C0419H1</h5>
-    </div>
-    <div class="container mt-5">
-      <fieldset class="border p-3">
-          <legend>Đề Bài</legend>
-          Viết một lớp các đối tượng mô tả loại dữ liệu nhiệt độ lấy tên là Temperature
-      </fieldset>
-      <fieldset class="border p-3">
-        <legend>Bài Làm</legend>
-        
-        <input type="text" id="c" style="width:300px;" oninput="convert()" onchange="convert()"> <br>
-        <div>Chuyển độ C sang độ F: </div><br>
-        <div id="cToF"></div> <br>
-        <div>Chuyển độ C sang độ K: </div><br>
-        <div id="cToK"></div>
 
-      </fieldset>
+<body onload="ready()">
+    <div class="wrapper">
+        <div class="td">
+            Chuyển đổi độ C sang độ F và độ K
+            <h5>Hồ Đăng San - C0419H1</h5>
+        </div>
+        <div class="container mt-5">
+            <fieldset class="border p-3">
+                <legend>Đề Bài</legend>
+                Viết một lớp các đối tượng mô tả loại dữ liệu nhiệt độ lấy tên là Temperature
+            </fieldset>
+            <fieldset class="border p-3">
+                <legend>Bài Làm</legend>
+
+                <input type="text" id="c" style="width:300px;" oninput="convert()" onchange="convert()"> <br>
+                <div>Chuyển độ C sang độ F: </div><br>
+                <div id="cToF"></div> <br>
+                <div>Chuyển độ C sang độ K: </div><br>
+                <div id="cToK"></div>
+
+            </fieldset>
+        </div>
     </div>
-  </div>
-  <div class="d-none">Copyright by &#169; Hồ Đăng San - C0419H1</div>
+    <div class="d-none">Copyright by &#169; Hồ Đăng San - C0419H1</div>
 </body>
-<script>           
-            
+<script>
 </script>
+
 </html>

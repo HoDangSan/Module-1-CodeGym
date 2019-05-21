@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[Bài tập] Validate email</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function isEmail(str) {
+        regexp = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+        if (regexp.test(str)) {
+            return true;
+        }
+        return false;
+    }
+    let zipcode = "15thxd.hodangsan@gmail.com"
+    document.write(zipcode + "<br>");
+    document.write(isEmail(zipcode) ? "Email Hợp lệ <br>" : "Email không hợp lệ <br>");
+    zipcode = "Những kẻ mộng mơ";
+    document.write(zipcode + "<br>");
+    document.write(isEmail(zipcode) ? "Email Hợp lệ" : "Email không hợp lệ");
+</script>
+
+</html>
