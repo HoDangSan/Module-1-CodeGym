@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[Bài tập] Validate account</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function isAccount(str) {
+        regexp = /^[_a-z0-9]{6,}$/;
+        if (regexp.test(str)) {
+            return true;
+        }
+        return false;
+    }
+    let zipcode = "15thxdhodangsan";
+    document.write(zipcode + "<br>");
+    document.write(isAccount(zipcode) ? "Account Hợp lệ <br>" : "Account không hợp lệ <br>");
+    zipcode = "15thxdhodangsan@";
+    document.write(zipcode + "<br>");
+    document.write(isAccount(zipcode) ? "Account Hợp lệ <br>" : "Account không hợp lệ <br>");
+</script>
+
+</html>
