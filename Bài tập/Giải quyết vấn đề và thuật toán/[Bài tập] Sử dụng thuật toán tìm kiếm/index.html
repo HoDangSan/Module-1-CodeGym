@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[Bài tập] Sử dụng thuật toán tìm kiếm</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function isViettel(str) {
+        regexp = /^0[3][23456789]/;
+        if (regexp.test(str)) {
+            return true;
+        }
+        return false;
+    }
+    let danhsachsdt = [];
+    let socuamangviettel = [];
+
+    for (let i = 0; i < 2; i++) {
+        danhsachsdt[i] = prompt("nhap so");
+        if (isViettel(danhsachsdt[i])) {
+            socuamangviettel[socuamangviettel.length] = danhsachsdt[i];
+        }
+    }
+
+    for (let i = 0; i < socuamangviettel.length; i++) {
+        document.write(socuamangviettel[i] + "<br>");
+    }
+</script>
+
+</html>

@@ -60,7 +60,6 @@ function updateAll() {
     }
 }
 
-
 window.onload = function() {
     RatImg = document.getElementById("rat");
     CatImg = document.getElementById("cat");
